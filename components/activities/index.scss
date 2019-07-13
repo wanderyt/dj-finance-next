@@ -1,0 +1,57 @@
+.Activities {
+  .Activities--Header {
+    background-color: #FFF;
+    text-align: center;
+    height: 30px;
+    position: relative;
+
+    .Activities--BackButton {
+      transform: rotate(-180deg);
+      // background-image: url('./arrow.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+      width: 18px;
+      height: 30px;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .Activities--NameTag {
+      line-height: 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .Activities--LeftArea {
+    background-color: #FFF;
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    .Activities--LeftCaption {
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    }
+    .Activities--LeftAmount {
+      color: rgba(4, 97, 24, 0.473);
+      font-weight: bold;
+    }
+  }
+
+  .Activities--List {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .ActivityTile-Item {
+      margin: 10px;
+      width: 90%;
+      min-width: 180px;
+
+      // @media (max-width: 400px) {
+      //   width: 90%;
+      // }
+    }
+  }
+}
