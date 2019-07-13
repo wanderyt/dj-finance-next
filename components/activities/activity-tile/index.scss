@@ -1,0 +1,72 @@
+.ActivityTile {
+  min-width: 150px;
+  box-shadow:
+    0px 1px 3px 0px rgba(0,0,0,0.2),
+    0px 1px 1px 0px rgba(0,0,0,0.14),
+    0px 2px 1px -1px rgba(0,0,0,0.12);
+  border-radius: 4px;
+  background-color: #FFF;
+
+  .Activity--Item {
+    padding: 0 10px 10px;
+  }
+
+  .Activity--Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+
+    .Activity--Caption {
+      .Activity--Name {
+        color: rgba(0, 0, 0, 0.87);
+        font-size: 17px;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: bold;
+        margin: 2px 0;
+        letter-spacing: 0.15px;
+      }
+      .Activity--Date {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 14px;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        font-weight: 400;
+        margin: 2px 0;
+        letter-spacing: 0.15px;
+      }
+    }
+
+    .Activity--AmountArea {
+      font-size: 20px;
+      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-weight: bold;
+      line-height: 21px;
+      letter-spacing: 0.15px;
+      .Activity--Income {
+        color: rgba(4, 97, 24, 0.473);
+        &::before {
+          content: '+ ';
+          color: rgba(4, 97, 24, 0.473);
+        }
+      }
+      .Activity--Outcome {
+        color: rgba(238, 37, 30, 0.979);
+        &::before {
+          content: '- ';
+          color: rgba(238, 37, 30, 0.979);
+        }
+      }
+    }
+  }
+
+  .Activity--Toolbar {
+    padding: 0 6px 10px;
+    .Activity--LearnMore, .Activity--Fold {
+      min-width: 64px;
+      margin: 0 4px;
+      font-size: 0.8125rem;
+      color: #2196F3;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.Navigator {
+  .Navigator__Items {
+    display: flex;
+
+    .Navigator__Item {
+      position: relative;
+      max-width: 160px;
+      height: 40px;
+      padding: 0 10px;
+      box-shadow: 1px 1px 1px #f5f5f5;
+
+      text-align: center;
+
+      .Navigator__Item__Title {
+        line-height: 40px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        height: 30px;
+        line-height: 40px;
+        border-right: 1px solid grey;
+      }
+    }
+  }
+}
