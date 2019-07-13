@@ -16,6 +16,12 @@ const Header = () => (
     <Link href="/">
       <a>Home Page</a>
     </Link>
+    <Link href="/weatherApi">
+      <a>天气 api</a>
+    </Link>
+    <Link href="/weatherData">
+      <a>天气 数据</a>
+    </Link>
   </div>
 );
 
