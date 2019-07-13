@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ActivityTile from './activity-tile';
 import ACTIVITIES from './activities-data';
 
-import './index.scss';
+// import './index.scss';
 
 // const TYPE_INCOME = 1; // 收入
 // const TYPE_OUTCOME = 2; // 支出
@@ -33,7 +33,8 @@ const Activities = ({keyContent, keyContentPush}) => {
   }
 
   return (
-    <div className='Activities'>
+    <div
+      className='Activities'>
       <div className='KeyContent'>
         {
           linkClicked &&
@@ -58,15 +59,44 @@ const Activities = ({keyContent, keyContentPush}) => {
           </a>
         </div>
       </div>
-      <div className='Activities--LeftArea'>
-        <span className='Activities--LeftCaption'>剩余金额：</span>
-        <span className='Activities--LeftAmount'>{leftAmount}</span>
+      <div
+        className='Activities--LeftArea'
+        style={{
+          backgroundColor: '#FFF',
+          textAlign: 'center',
+          padding: '10px 0 0',
+          fontSize: '18px',
+          lineHeight: '30px',
+          height: '30px',
+        }}>
+        <span
+          className='Activities--LeftCaption'
+          style={{
+            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+          }}>剩余金额：</span>
+        <span
+          className='Activities--LeftAmount'
+          style={{
+            color: 'rgba(4, 97, 24, 0.473)',
+            fontWeight: 'bold'
+          }}>{leftAmount}</span>
       </div>
-      <div className='Activities--List'>
+      <div
+        className='Activities--List'
+        style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          flexWrap: 'wrap'
+        }}>
         {
           ACTIVITIES.map((item) => (
             <div
               className='ActivityTile-Item'
+              style={{
+                margin: '10px',
+                width: '90%',
+                minWidth: '180px'
+              }}
               key={item.id}>
               <ActivityTile {...item} />
             </div>
