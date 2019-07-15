@@ -22,6 +22,9 @@ const Header = () => (
     <Link href="/weatherData">
       <a>天气 数据</a>
     </Link>
+    <Link href="/weather">
+      <a>实时天气</a>
+    </Link>
   </div>
 );
 
