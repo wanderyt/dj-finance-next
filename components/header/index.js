@@ -11,7 +11,7 @@ const Header = () => (
   <div>
     <Head>
       <title>东方锦绣幼儿园五班账本</title>
-      <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/static/newfavicon.ico" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <div>
