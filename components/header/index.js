@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 const linkStyle = {
-  marginRight: 15
+  margin: '0 10px',
+  textDecoration: 'none'
 };
 
 const Header = () => (
@@ -13,18 +14,20 @@ const Header = () => (
       <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <Link href="/">
-      <a>Home Page</a>
-    </Link>
-    <Link href="/weatherApi">
-      <a>天气 api</a>
-    </Link>
-    <Link href="/weatherData">
-      <a>天气 数据</a>
-    </Link>
-    <Link href="/weather">
-      <a>实时天气</a>
-    </Link>
+    <div>
+      <Link href="/">
+        <a style={linkStyle}>Home Page</a>
+      </Link>
+      <Link href="/weatherApi">
+        <a style={linkStyle}>天气 api</a>
+      </Link>
+      <Link href="/weatherData">
+        <a style={linkStyle}>天气 数据</a>
+      </Link>
+      <Link href="/weather">
+        <a style={linkStyle}>实时天气</a>
+      </Link>
+    </div>
   </div>
 );
 
