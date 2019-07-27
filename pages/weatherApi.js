@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/header';
+import JSONLD from '../components/jsonld';
 import Axios from 'axios';
 
 const Weather = () => {
@@ -13,9 +14,37 @@ const Weather = () => {
       });
   }, []);
 
+  const jsonld = {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "/",
+        "name": "Home"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "/weather/",
+        "name": "weather"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@id": "/weatherApi/",
+        "name": "weather api"
+      }
+    }]
+  };
+
   return (
     <div>
       <Header />
+      <JSONLD jsonld={jsonld} />
       {
         weather.code ?
         <div className='Weather'>
