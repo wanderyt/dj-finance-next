@@ -32,6 +32,8 @@ const Activities = ({keyContent, keyContentPush}) => {
     setLinkClicked(false);
   }
 
+  const date = new Date();
+
   return (
     <div
       className='Activities'>
@@ -58,6 +60,11 @@ const Activities = ({keyContent, keyContentPush}) => {
             <span>查看关键信息2</span>
           </a>
         </div>
+      </div>
+      <div style={{
+        textAlign: 'center'
+      }}>
+        {date.toString()}
       </div>
       <div
         className='Activities--LeftArea'

@@ -1,6 +1,27 @@
 import React from 'react';
 import Header from '../components/header';
+import JSONLD from '../components/jsonld';
 import Axios from 'axios';
+
+const jsonld = {
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "/",
+      "name": "Home"
+    }
+  }, {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "/weather/",
+      "name": "weather"
+    }
+  }]
+};
 
 class Weather extends React.Component {
   static getInitialProps() {
@@ -17,6 +38,7 @@ class Weather extends React.Component {
     return (
       <div>
         <Header />
+        <JSONLD jsonld={jsonld} />
         {
           weather.code ?
           <div className='Weather'>
