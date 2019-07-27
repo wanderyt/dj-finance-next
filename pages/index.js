@@ -22,7 +22,7 @@ const Index = () => {
 
   return (
     <div>
-      <Header />
+      <Header dynamicHeader={true} />
       <Activities keyContent={keyContent} keyContentPush={keyContentPush} />
     </div>
   );
