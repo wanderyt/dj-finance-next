@@ -37,7 +37,7 @@ class Weather extends React.Component {
     let {data: weather} = this.props;
     return (
       <div>
-        <Header />
+        <Header dynamicHeader={true} />
         <JSONLD jsonld={jsonld} />
         {
           weather.code ?
