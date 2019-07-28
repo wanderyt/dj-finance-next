@@ -43,7 +43,7 @@ const Weather = () => {
 
   return (
     <div>
-      <Header />
+      <Header dynamicHeader={true} />
       <JSONLD jsonld={jsonld} />
       {
         weather.code ?
