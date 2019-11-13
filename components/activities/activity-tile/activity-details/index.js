@@ -2,7 +2,23 @@ import React from 'react';
 
 // import './index.scss';
 
+const fontStyle = {
+  height: '25px',
+  fontSize: '14px',
+  lineHeight: '25px',
+  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  padding: '2px',
+};
+
 const ActivityDetails = ({type, details}) => {
+  const isFloated = details.total % 1 !== 0;
+  const formatNumber = (number) => {
+    if (isFloated) {
+      return parseFloat(number).toFixed(2);
+    } else {
+      return number;
+    }
+  }
   return (
     <div className='ActivityDetails'>
       {
@@ -13,9 +29,7 @@ const ActivityDetails = ({type, details}) => {
               <div
                 className='AmountItem'
                 style={{
-                  height: '20px',
-                  fontSize: '12px',
-                  lineHeight: '20px',
+                  ...fontStyle,
                   color: '#87909A'
                 }}>
                 <div
@@ -27,15 +41,16 @@ const ActivityDetails = ({type, details}) => {
                   className='Amount'
                   style={{
                     float: 'right'
-                  }}>{item.number} x {item.price} = {item.number * item.price}</div>
+                  }}>
+                  {formatNumber(item.number * item.price)}
+                  {/* {item.number} * {item.price} = {item.number * item.price} */}
+                </div>
               </div>
             ))
           }
           <div className='Activity--Total'
             style={{
-              height: '20px',
-              fontSize: '15px',
-              lineHeight: '20px',
+              ...fontStyle,
               fontWeight: 'bold',
               borderTop: '1px solid #87909A'
             }}>
@@ -46,7 +61,7 @@ const ActivityDetails = ({type, details}) => {
             <div className='Activity--TotalAmount'
               style={{
                 float: 'right'
-              }}>{details.total}</div>
+              }}>{formatNumber(details.total)}</div>
           </div>
         </div>
       }
@@ -55,21 +70,20 @@ const ActivityDetails = ({type, details}) => {
         <div className='Activity--Items'>
           <div className='AmountItem'
             style={{
-              height: '20px',
-              fontSize: '12px',
-              lineHeight: '20px',
+              ...fontStyle,
               color: '#87909A'
             }}>
             <div className='Amount'
               style={{
                 float: 'right'
-              }}>{details.number} x {details.price} = {details.number * details.price}</div>
+              }}>
+              {/* {details.number} * {details.price} = {details.number * details.price} */}
+              {formatNumber(details.number * details.price)}
+            </div>
           </div>
           <div className='Activity--Total'
             style={{
-              height: '20px',
-              fontSize: '15px',
-              lineHeight: '20px',
+              ...fontStyle,
               fontWeight: 'bold',
               borderTop: '1px solid #87909A'
             }}>
@@ -80,7 +94,7 @@ const ActivityDetails = ({type, details}) => {
             <div className='Activity--TotalAmount'
               style={{
                 float: 'right'
-              }}>{details.total}</div>
+              }}>{formatNumber(details.total)}</div>
           </div>
         </div>
       }

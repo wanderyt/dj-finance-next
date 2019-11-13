@@ -10,11 +10,12 @@ const linkStyle = {
 const Header = ({dynamicHeader}) => (
   <div>
     <Head>
-      <title>{`东方锦绣幼儿园五班账本 ${dynamicHeader ? ' - ' + new Date() : ''}`}</title>
+      {/* <title>{`东方锦绣幼儿园五班账本 ${dynamicHeader ? ' - ' + new Date() : ''}`}</title> */}
+      <title>东方锦绣幼儿园五班账本</title>
       <link rel="icon" type="image/x-icon" href="/static/newfavicon.ico" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
-    <div>
+    {/* <div>
       <Link href="/">
         <a style={linkStyle}>Home Page</a>
       </Link>
@@ -27,7 +28,7 @@ const Header = ({dynamicHeader}) => (
       <Link href="/weather">
         <a style={linkStyle}>实时天气</a>
       </Link>
-    </div>
+    </div> */}
   </div>
 );
 

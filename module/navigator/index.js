@@ -15,12 +15,12 @@ const navigationItems = [{
 // }, {
 //   name: '图片延迟',
 //   link: '/testImagesLazyload'
-}, {
-  name: '天气',
-  link: '/weather'
-}, {
-  name: '天气2',
-  link: '/wheather'
+// }, {
+//   name: '天气',
+//   link: '/weather'
+// }, {
+//   name: '天气2',
+//   link: '/wheather'
 }];
 
 const Navigator = (props) => {
