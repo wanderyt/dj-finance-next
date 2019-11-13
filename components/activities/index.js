@@ -37,7 +37,7 @@ const Activities = ({keyContent, keyContentPush}) => {
   return (
     <div
       className='Activities'>
-      <div className='KeyContent'>
+      {/* <div className='KeyContent'>
         {
           linkClicked &&
           <div className='KeyContent-Container'>
@@ -65,7 +65,7 @@ const Activities = ({keyContent, keyContentPush}) => {
         textAlign: 'center'
       }}>
         {date.toString()}
-      </div>
+      </div> */}
       <div
         className='Activities--LeftArea'
         style={{
@@ -75,12 +75,10 @@ const Activities = ({keyContent, keyContentPush}) => {
           fontSize: '18px',
           lineHeight: '30px',
           height: '30px',
+          fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
         }}>
         <span
-          className='Activities--LeftCaption'
-          style={{
-            fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
-          }}>剩余金额：</span>
+          className='Activities--LeftCaption'>剩余金额：</span>
         <span
           className='Activities--LeftAmount'
           style={{
